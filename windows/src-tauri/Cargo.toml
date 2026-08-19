@@ -1,0 +1,22 @@
+[package]
+name = "airdrop-x-windows"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+airdrop-x-protocol.workspace = true
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+windows = { version = "0.61", features = [
+    "Devices_Bluetooth_Advertisement",
+    "Devices_Enumeration",
+    "Devices_WiFiDirect",
+    "Foundation",
+    "Networking",
+    "Storage_Streams"
+] }

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirDrop-X</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main>
+      <header><span class="logo">X</span><h1>AirDrop-X</h1><small>无需服务器的局域网文件传输</small></header>
+      <section>
+        <h2>附近设备</h2>
+        <div id="devices">点击扫描，通过 BLE 发现 Android 设备</div>
+        <button id="scan">扫描附近设备</button>
+        <button id="connect" class="secondary" disabled>通过 Wi‑Fi Direct 连接</button>
+      </section>
+      <section>
+        <h2>发送文件</h2>
+        <label>直连地址<input id="address" readonly placeholder="连接后自动获取" /></label>
+        <button id="send" disabled>选择文件并发送</button>
+      </section>
+      <section>
+        <h2>接收文件</h2>
+        <label>监听地址<input id="bind" value="0.0.0.0:48765" /></label>
+        <button id="receive" class="secondary">选择目录并等待</button>
+      </section>
+      <p id="status" role="status" aria-live="polite">就绪</p>
+      <footer>V0.1 · TCP + SHA-256 完整性校验</footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

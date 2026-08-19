@@ -1,0 +1,28 @@
+# Rust
+/target/
+*.pdb
+
+# Node / Tauri frontend
+/windows/node_modules/
+/windows/dist/
+/windows/src-tauri/gen/
+/windows/src-tauri/icons/android/
+/windows/src-tauri/icons/ios/
+/windows/src-tauri/icons/*.icns
+/windows/src-tauri/icons/Square*Logo.png
+/windows/src-tauri/icons/StoreLogo.png
+
+# Android / Gradle
+/android/.gradle/
+/android/**/build/
+local.properties
+*.iml
+/.idea/
+
+# Local release artifacts
+/release/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
